@@ -171,9 +171,9 @@ function populateFromCollection(c, c2) {
     
     var a = makeArray(aNames);
     jsonData.names = aNames + "";
-	jsonData.count= a.length;
+    jsonData.count= a.length;
     
-	a.forEach(function(k) {
+    a.forEach(function(k) {
 	    var k2 = "request." + c2 + "." + k;
 		var v = context.getVariable(k2);
 		jsonData[k] = v;
@@ -185,25 +185,27 @@ function populateFromCollection(c, c2) {
 		else {
 		    jsonData[k] = v;
 		}
-	});
+     });
 
-	return jsonData;
+    return jsonData;
 
 }
 
 // From: http://stackoverflow.com/questions/22622151/how-to-get-all-apigee-request-headers-in-javascript
 function makeArray(a) {
-    // Collection is a java.util.TreeMap$KeySet;
- 	// Convert it to a string and then back to any array
- 	// Conversion to string results in: "[A, B, C]" 
-	return (a + '').slice(1, -1).split(', ');
-
+// The array object is actually a java.util.TreeMap collection object.
+// To work with it as an array in JavaScript, the one line below converts 
+// it to a string and then back to any array.
+// The (a +'') operation performs toString() on the TreeMap that results in a string: "[A, B, C]" 
+// The slice(1, -1) operation removes the left/leading and right/trailing square brackets
+// The split(', ') operation parse the string and converts each string token into an element in the array
+return (a + '').slice(1, -1).split(', ');
 }
 
 function populateFromArray(a) {
     
-    var jsonData = {};
-	a.forEach(function(element, index, array) {
+ var jsonData = {};
+ a.forEach(function(element, index, array) {
 
 		var k = element;
 		var v = context.getVariable(k);
@@ -246,9 +248,9 @@ function populateFromArray(a) {
 		}
 
 		jsonData[element] = v2;
-	});
+   });
 
-	return jsonData;
+  return jsonData;
 
 }
 
