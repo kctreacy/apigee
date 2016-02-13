@@ -34,30 +34,68 @@ API PROXY
 </APIProxy>
 
 <!--
-ProxyEndpoint
+ProxyEndpoint - controls inbound behavior
 -->
 <ProxyEndpoint name="default">
     <Description/>
     <FaultRules/>
+    
     <PreFlow name="PreFlow">
         <Request/>
         <Response/>
     </PreFlow>
+    
+    <Flows/>
+    
     <PostFlow name="PostFlow">
         <Request/>
         <Response/>
     </PostFlow>
-    <Flows/>
+    
     <HTTPProxyConnection>
         <BasePath>/reverseproxytest1</BasePath>
         <Properties/>
         <VirtualHost>default</VirtualHost>
         <VirtualHost>secure</VirtualHost>
     </HTTPProxyConnection>
+    
+     <!-- Reference to TargetEndpoint element below -->
     <RouteRule name="default">
         <TargetEndpoint>default</TargetEndpoint>
     </RouteRule>
+    
 </ProxyEndpoint>
+
+<!--
+TargetEndpoint - controls outbound behavior
+-->
+<TargetEndpoint name="default">
+    
+    <Description/>
+    <FaultRules/>
+    
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>add-cors</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    
+    <Flows/>
+    
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    
+    <HTTPTargetConnection>
+        <Properties/>
+        <URL>https://test</URL>
+    </HTTPTargetConnection>
+    
+</TargetEndpoint>
 
 <!--
 CORS Policy
