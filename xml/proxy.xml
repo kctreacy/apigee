@@ -1,24 +1,67 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Apigee>
+    
+<!--
+API PROXY
+-->
 <APIProxy name="ReverseProxyTest1" revision="1">
+    
     <ConfigurationVersion minorVersion="0" majorVersion="4"/>
     <CreatedAt>1455365311903</CreatedAt>
     <CreatedBy>kctreacy@gmail.com</CreatedBy>
     <DisplayName>ReverseProxyTest1</DisplayName>
     <LastModifiedAt>1455365311903</LastModifiedAt>
     <LastModifiedBy>kctreacy@gmail.com</LastModifiedBy>
+    
+     <!-- Reference to Policy element below -->
     <Policies>
         <Policy>add-cors</Policy>
     </Policies>
+    
+    <!-- Reference to ProxyEndpoint element below -->
     <ProxyEndpoints>
         <ProxyEndpoint>default</ProxyEndpoint>
     </ProxyEndpoints>
-    <Resources/>
-    <TargetServers/>
-    <TargetEndpoints>
+    
+    <!-- Reference to TargetEndpoint element below -->
+     <TargetEndpoints>
         <TargetEndpoint>default</TargetEndpoint>
     </TargetEndpoints>
+    
+    <Resources/>
+    <TargetServers/>
+   
 </APIProxy>
+
+<!--
+ProxyEndpoint
+-->
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules/>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows/>
+    <HTTPProxyConnection>
+        <BasePath>/reverseproxytest1</BasePath>
+        <Properties/>
+        <VirtualHost>default</VirtualHost>
+        <VirtualHost>secure</VirtualHost>
+    </HTTPProxyConnection>
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>
+
+<!--
+CORS Policy
+-->
 <AssignMessage name="add-cors" enabled="true" continueOnError="false" async="false">
     <DisplayName>Add CORS</DisplayName>
     <FaultRules/>
@@ -34,4 +77,5 @@
     <IgnoreUnresolvedVariables>true</IgnoreUnresolvedVariables>
     <AssignTo type="response" transport="http" createNew="false"/>
 </AssignMessage>
+
 </Apigee>
