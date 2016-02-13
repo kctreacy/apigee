@@ -1,0 +1,159 @@
+{
+  "client": {
+    "client.scheme": "http",
+    "client.host": "74.102.83.154",
+    "client.ip": "74.102.83.154",
+    "client.port": 54821,
+    "client.received.start.time": "Sat, 13 Feb 2016 11:45:57 UTC",
+    "client.received.start.timestamp": 1455363957727,
+    "client.received.end.time": "Sat, 13 Feb 2016 11:45:57 UTC",
+    "client.received.end.timestamp": 1455363957804,
+    "client.sent.end.time": null,
+    "client.sent.end.timestamp": -1,
+    "client.sent.start.time": null,
+    "client.sent.start.timestamp": -1
+  },
+  "ssl": {
+    "ssl.cipher": null,
+    "ssl.client.a.key": null,
+    "ssl.client.a.sig": null,
+    "ssl.client.i.dn": null,
+    "ssl.client.i.dn.c": null,
+    "ssl.client.i.dn.cn": null,
+    "ssl.client.i.dn.l": null,
+    "ssl.client.i.dn.o": null,
+    "ssl.client.m.serial": null,
+    "ssl.client.m.version": null,
+    "ssl.client.s.dn": null,
+    "ssl.client.s.dn.c": null,
+    "ssl.client.s.dn.cn": null,
+    "ssl.client.s.dn.l": null,
+    "ssl.client.s.dn.o": null,
+    "ssl.client.v.end": null,
+    "ssl.client.v.remain": null,
+    "ssl.client.v.start": null,
+    "ssl.protocol": null,
+    "ssl.server.a.key": null,
+    "ssl.server.a.sig": null,
+    "ssl.server.i.dn": null,
+    "ssl.server.i.dn.c": null,
+    "ssl.server.i.dn.cn": null,
+    "ssl.server.i.dn.l": null,
+    "ssl.server.i.dn.o": null,
+    "ssl.server.m.serial": null,
+    "ssl.server.m.version": null,
+    "ssl.server.s.dn": null,
+    "ssl.server.s.dn.c": null,
+    "ssl.server.s.dn.cn": null,
+    "ssl.server.s.dn.l": null,
+    "ssl.server.s.dn.o": null,
+    "ssl.server.v.end": null,
+    "ssl.server.v.remain": null,
+    "ssl.server.v.start": null,
+    "ssl.session.id": null
+  },
+  "clientCertX509Keys": {
+    "client.cn": null,
+    "client.country": null,
+    "client.email.address": null,
+    "client.locality": null,
+    "client.organization": null,
+    "client.organization.unit": null,
+    "client.ssl.enabled": "false",
+    "client.state": null
+  },
+  "proxy": {
+    "proxy.basepath": "/debugvars_client",
+    "proxy.client.ip": "74.102.83.154",
+    "proxy.pathsuffix": "",
+    "proxy.url": "http://rrt330ea.us-ea.4.apigee.com/debugvars_client"
+  },
+  "SystemParms": {
+    "router.uuid": null,
+    "system.pod.name": "rea1gw398",
+    "system.region.name": "us-east-1",
+    "system.time": "Sat, 13 Feb 2016 11:45:57 UTC",
+    "system.time.day": 13,
+    "system.time.dayofweek": 7,
+    "system.time.hour": 11,
+    "system.time.millisecond": 809,
+    "system.time.minute": 45,
+    "system.time.month": 2,
+    "system.time.second": 57,
+    "system.time.year": 2016,
+    "system.time.zone": "UTC",
+    "system.timestamp": 1455363957809,
+    "system.uuid": "1ff46993-f5f4-4a3d-91d3-568a3e35ff0e"
+  },
+  "Vars": {
+    "request.formparams.count": null,
+    "request.formparams.names": null,
+    "request.formstring": null,
+    "request.headers.count": 9,
+    "request.headers.names": "[Accept, Accept-Encoding, Accept-Language, Host, Referer, User-Agent, X-Forwarded-For, X-Forwarded-Port, X-Forwarded-Proto]",
+    "request.queryparams.count": 0,
+    "request.queryparams.names": "[]",
+    "request.querystring": "",
+    "request.transport.message": "com.apigee.messaging.adaptors.http.message.HttpRequestMessage@2509a3fa",
+    "request.content": "",
+    "request": "com.apigee.flow.message.MessageImpl@1bec8515",
+    "request.transportid": "http",
+    "request.path": "/debugvars_client",
+    "request.uri": "/debugvars_client",
+    "request.url": null,
+    "request.verb": "GET",
+    "request.version": "1.1"
+  },
+  "Vars2": {
+    "application.basepath": null,
+    "proxy.basepath": "/debugvars_client",
+    "proxy.pathsuffix": "",
+    "request.path": "/debugvars_client",
+    "request.querystring": "",
+    "request.uri": "/debugvars_client",
+    "request.url": null,
+    "target.basepath": null,
+    "target.url": null
+  },
+  "request": {
+    "Headers": {
+      "names": "[Accept, Accept-Encoding, Accept-Language, Host, Referer, User-Agent, X-Forwarded-For, X-Forwarded-Port, X-Forwarded-Proto]",
+      "count": 9,
+      "Accept": "text/html, application/xhtml+xml, image/jxr, */*",
+      "AcceptArray": [
+        "text/html",
+        "application/xhtml+xml",
+        "image/jxr",
+        "*/*"
+      ],
+      "Accept-Encoding": "gzip, deflate",
+      "Accept-EncodingArray": [
+        "gzip",
+        "deflate"
+      ],
+      "Accept-Language": "en-US, en;q=0.5",
+      "Accept-LanguageArray": [
+        "en-US",
+        "en;q=0.5"
+      ],
+      "Host": "kctreacy-test.apigee.net",
+      "Referer": "https://enterprise.apigee.com/platform/",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586",
+      "User-AgentArray": [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML",
+        "like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586"
+      ],
+      "X-Forwarded-For": "74.102.83.154",
+      "X-Forwarded-Port": "80",
+      "X-Forwarded-Proto": "http"
+    },
+    "QueryParams": {
+      "names": "",
+      "count": 0
+    },
+    "FormParms": {
+      "names": "",
+      "count": 0
+    }
+  }
+}
